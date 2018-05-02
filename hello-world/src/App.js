@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
-class HelloWorld extends Component {
-  render () {
-    return (
-      <div id="two-tags">
-        <h1>Hello {this.props.name}!</h1>
-        <a href="#" id="click">Click Me</a>
-      </div>
-    )
-  }
-}
+import HelloWorld from './helloWorld/helloWorld.js';
 
 class App extends Component {
   render() {
