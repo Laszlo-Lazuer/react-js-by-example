@@ -50,7 +50,7 @@ class HelloWorldApp extends Component {
   render() {
     return (
       <div>
-        <HelloWorld name='Laszlo' />
+        <HelloWorld name='Dude' />
         <OneTimeClickLink />
       </div>
     );
