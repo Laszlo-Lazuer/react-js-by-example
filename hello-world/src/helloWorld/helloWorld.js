@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class HelloWorld extends Component {
+class OneTimeClickLink extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,23 +14,47 @@ class HelloWorld extends Component {
     });
   }
 
-  render () {
+  render() {
     if (this.state.clicked === false) {
     return (
-      <div id="two-tags">
-        <h1>Hello {this.props.name}!</h1>
         <a href="#" id="click" onClick={this.linkClicked}>Click Me</a>
-      </div>
     );
   } else {
     return (
-      <div id="two-tags">
-        <h1>Hello {this.props.name}</h1>
         <span>You clicked the link</span>
-      </div>
     );
   }
   }
 }
 
-export default HelloWorld;
+
+class HelloWorld extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  linkClicked = (event) => {
+    this.setState({
+      clicked: true
+    });
+  }
+
+  render () {
+    return (
+        <h1>Hello {this.props.name}!</h1>
+    );
+  }
+}
+
+class HelloWorldApp extends Component {
+  render() {
+    return (
+      <div>
+        <HelloWorld name='Laszlo' />
+        <OneTimeClickLink />
+      </div>
+    );
+  }
+}
+
+export default HelloWorldApp;
