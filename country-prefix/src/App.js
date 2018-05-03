@@ -1,18 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div class="form-horizontal">
+          <div class="form-group">
+            <label for="selectbox" class="col-sm-3 control-label">Country</label>
+            <div class="col-sm-3">
+              <select class="form-control" id="selectbox"> <option value="Poland">Poland</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="input-text" class="col-sm-3 control-label">Phone number</label>
+            <div class="col-sm-3">
+              <div class="input-group">
+                <span class="input-group-addon">+48</span>
+                <input type="text" class="form-control" id="input-text" />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
