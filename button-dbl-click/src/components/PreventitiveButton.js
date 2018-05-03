@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class ButtonDblClk extends Component {
+class PreventitiveButton extends Component {
   render() {
     return (
       <div>
@@ -10,4 +10,4 @@ class ButtonDblClk extends Component {
   }
 }
 
-export default ButtonDblClk;
+export default PreventitiveButton;
